@@ -44,10 +44,11 @@ const wh = reactive({
 })
 const route = useRoute()
 
-const w = document.documentElement.clientWidth
-const h = document.documentElement.clientHeight
-const rate = wh.h / h
-wh.w = rate * w
+// 自适应尺寸
+// const w = document.documentElement.clientWidth
+// const h = document.documentElement.clientHeight
+// const rate = wh.h / h
+// wh.w = rate * w
 </script>
 
 <style lang="scss" scoped>
