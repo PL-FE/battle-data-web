@@ -1,7 +1,11 @@
 <script setup></script>
 
 <template>
-  <h1 class="cls text-primary">2</h1>
+  <RouterView />
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.cls {
+  color: red;
+}
+</style>
