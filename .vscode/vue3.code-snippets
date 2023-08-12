@@ -1,0 +1,14 @@
+{
+	"vue3": {
+		"prefix": "vue3",
+		"body": [
+			"<template>",
+			"$1",
+			"</template>\n",
+			"<script setup>",
+			"</script>\n",
+			"<style scoped lang='scss'>\n",
+			"</style>"
+		],
+	}
+}
