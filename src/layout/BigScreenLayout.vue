@@ -31,8 +31,8 @@
 <script setup>
 import Sales from '@/module/Sales.vue'
 import SalesSupport from '@/module/SalesSupport.vue'
-import SalesTeam from '@/module/SalesTeam.vue'
-import Regional from '@/module/Regional/index.vue'
+import SalesTeam from '@/module/salesTeam/index.vue'
+import Regional from '@/module/regional/index.vue'
 import FlowingTrend from '@/module/FlowingTrend.vue'
 import BorderBox from '@/components/BorderBox.vue'
 import VScaleScreen from 'v-scale-screen'
