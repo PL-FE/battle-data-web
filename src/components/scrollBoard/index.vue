@@ -96,13 +96,13 @@ export default {
          * @type {String}
          * @default oddRowBGC = '#003B51'
          */
-        oddRowBGC: '#003B51',
+        oddRowBGC: '#fff',
         /**
          * @description Even row background color
          * @type {String}
          * @default evenRowBGC = '#003B51'
          */
-        evenRowBGC: '#0A2732',
+        evenRowBGC: '#fff',
         /**
          * @description Scroll wait time
          * @type {Number}
@@ -437,12 +437,11 @@ export default {
       const { $nextTick, $refs, ref, onResize } = this
 
       return new Promise((resolve) => {
-        $nextTick((_) => {
+        $nextTick(() => {
           const dom = (this.dom = $refs[ref])
 
           this.width = dom ? dom.clientWidth : 0
           this.height = dom ? dom.clientHeight : 0
-
           if (!dom) {
             console.warn('DataV: Failed to get dom node, component rendering may be abnormal!')
           } else if (!this.width || !this.height) {
@@ -514,7 +513,7 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  color: #fff;
+  color: #000;
 
   .text {
     @include text;
