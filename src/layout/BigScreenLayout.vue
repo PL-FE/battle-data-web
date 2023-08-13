@@ -7,20 +7,20 @@
   >
     <div class="r-big-screen-container h-full flex flex-col">
       <div class="r-big-screen-header text-8xl text-center border">我是标题</div>
-      <div class="r-big-screen-body flex-1">
-        <BorderBox class="border" title="流水趋势">
+      <div class="r-big-screen-body flex-1 grid gap-4 grid-cols-5 grid-rows-2">
+        <BorderBox class="one" title="流水趋势">
           <FlowingTrend />
         </BorderBox>
-        <BorderBox class="border" title="大区">
+        <BorderBox class="two col-start-2 col-end-[span_2]" title="大区">
           <Regional />
         </BorderBox>
-        <BorderBox class="border col-start-3 col-end-[span_2]" title="销售组">
+        <BorderBox class="three col-start-4 col-end-[span_2]" title="销售组">
           <SalesTeam />
         </BorderBox>
-        <BorderBox class="border" title="销售支持">
+        <BorderBox class="four" title="销售支持">
           <SalesSupport />
         </BorderBox>
-        <BorderBox class="border col-start-2 col-end-[span_3]" title="销售个人">
+        <BorderBox class="five col-start-2 col-end-[span_4]" title="销售个人">
           <Sales />
         </BorderBox>
       </div>
@@ -32,7 +32,7 @@
 import Sales from '@/module/Sales.vue'
 import SalesSupport from '@/module/SalesSupport.vue'
 import SalesTeam from '@/module/SalesTeam.vue'
-import Regional from '@/module/Regional.vue'
+import Regional from '@/module/Regional/index.vue'
 import FlowingTrend from '@/module/FlowingTrend.vue'
 import BorderBox from '@/components/BorderBox.vue'
 import VScaleScreen from 'v-scale-screen'
@@ -52,13 +52,22 @@ const route = useRoute()
 </script>
 
 <style lang="scss" scoped>
-.r-big-screen-body {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 10px;
+.one {
+  background: #19caad;
 }
-.kk {
-  grid-column: 3 / span 2;
+.two {
+  background: #8cc7b5;
+}
+.three {
+  background: #d1ba74;
+}
+.four {
+  background: #bee7e9;
+}
+.five {
+  background: #e6ceac;
+}
+.six {
+  background: #ecad9e;
 }
 </style>
