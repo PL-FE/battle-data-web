@@ -1,20 +1,16 @@
 <template>
   <div class="h-full flex">
-    <TitleColBox class="flex-1">
-      <ScrollBoard ref="tableRef1" :config="config" class="h-full w-full" />
-    </TitleColBox>
-    <TitleColBox class="flex-1">
-      <ScrollBoard ref="tableRef2" :config="config" class="h-full w-full" />
-    </TitleColBox>
-    <TitleColBox class="flex-1">
-      <ScrollBoard ref="tableRef3" :config="config" class="h-full w-full" />
-    </TitleColBox>
+    <el-container v-for="it in 3" :key="it">
+      <el-header class="leading-[60px] text-center">Header</el-header>
+      <el-main class="!p-0">
+        <ScrollBoard :ref="'tableRef' + it" :config="config" class="h-full w-full" />
+      </el-main>
+    </el-container>
   </div>
 </template>
 
 <script setup>
 import ScrollBoard from '@/components/scrollBoard/index.vue'
-import TitleColBox from '@/components/TitleColBox.vue'
 import { nextTick, onMounted, ref } from 'vue'
 const tableRef1 = ref(null)
 const tableRef2 = ref(null)
@@ -40,7 +36,7 @@ onMounted(() => {
           ['行10列1', '行10列2', '行10列3']
         ]
       }
-    }, 3000)
+    }, 300)
   })
 })
 const config = ref({})
