@@ -1,73 +1,19 @@
 <template>
-  <v-chart class="chart" :option="option" autoresize :initOptions="initOpts" />
+  <el-progress type="dashboard" :percentage="percentage" :color="colors" />
 </template>
 
 <script setup>
-import VChart from 'vue-echarts'
-import { reactive, ref } from 'vue'
-const initOpts = ref({
-  renderer: 'svg'
-})
-const gaugeData = [
-  {
-    value: 90,
-    name: '北部一区 \n 600',
-    title: {
-      offsetCenter: ['0%', '20%'],
-      lineHeight: 24
-    },
-    detail: {
-      valueAnimation: true
-    }
-  }
+import { ref } from 'vue'
+
+const percentage = ref(10)
+
+const colors = [
+  { color: '#f56c6c', percentage: 20 },
+  { color: '#e6a23c', percentage: 40 },
+  { color: '#5cb87a', percentage: 60 },
+  { color: '#1989fa', percentage: 80 },
+  { color: '#6f7ad3', percentage: 100 }
 ]
-const option = reactive({
-  series: [
-    {
-      type: 'gauge',
-      min: 0,
-      max: 100,
-      radius: '100%',
-      itemStyle: {
-        color: '#FFAB91'
-      },
-      progress: {
-        show: true,
-        width: 10
-      },
-      pointer: {
-        show: false
-      },
-      axisLine: {
-        lineStyle: {
-          width: 10
-        }
-      },
-      axisTick: {
-        show: false
-      },
-      splitLine: {
-        show: false
-      },
-      axisLabel: {
-        show: false
-      },
-      anchor: {
-        show: false
-      },
-      title: {},
-      detail: {
-        valueAnimation: true,
-        offsetCenter: [0, '-40%'],
-        fontWeight: 'bolder',
-        fontSize: 24,
-        formatter: '{value} %',
-        color: 'inherit'
-      },
-      data: gaugeData
-    }
-  ]
-})
 </script>
 
 <style scoped lang="scss"></style>

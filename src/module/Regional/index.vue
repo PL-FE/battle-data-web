@@ -4,9 +4,12 @@
       <span class="whitespace-nowrap">总流水</span>
       <div class="flex-1 flex h-full">
         <GaugeTemperature />
-        <GaugeTemperature class="scale-[0.9] origin-left" />
+        <GaugeTemperature />
+        <GaugeTemperature />
+        <GaugeTemperature />
+        <!-- <GaugeTemperature class="scale-[0.9] origin-left" />
         <GaugeTemperature class="scale-[0.8] origin-left" />
-        <GaugeTemperature class="scale-[0.7] origin-left" />
+        <GaugeTemperature class="scale-[0.7] origin-left" /> -->
       </div>
     </div>
   </div>
