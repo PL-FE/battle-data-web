@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import Sales from '@/module/Sales.vue'
+import Sales from '@/module/sales/index.vue'
 import SalesSupport from '@/module/SalesSupport.vue'
 import SalesTeam from '@/module/salesTeam/index.vue'
 import Regional from '@/module/regional/index.vue'

@@ -1,5 +1,5 @@
 <template>
-  <el-progress type="dashboard" indeterminate :duration="1500">
+  <el-progress type="dashboard" :duration="1500">
     <template #default="{ percentage }">
       <p class="text-red-600 font-bold">
         <count-up :duration="1.5" :end-val="percentage" :options="{ suffix: '%' }"></count-up>
