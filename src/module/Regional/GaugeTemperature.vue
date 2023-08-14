@@ -1,19 +1,25 @@
 <template>
-  <el-progress type="dashboard" :percentage="percentage" :color="colors" />
+  <el-progress type="dashboard" indeterminate :duration="1500">
+    <template #default="{ percentage }">
+      <p class="text-red-600 font-bold">
+        <count-up :duration="1.5" :end-val="percentage" :options="{ suffix: '%' }"></count-up>
+      </p>
+      <p class="pt-2">
+        {{ props.data.value1 }}
+      </p>
+      <p class="pt-2">
+        <count-up :duration="1.5" :end-val="props.data.value2"></count-up>
+      </p>
+    </template>
+  </el-progress>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import CountUp from 'vue-countup-v3'
 
-const percentage = ref(10)
-
-const colors = [
-  { color: '#f56c6c', percentage: 20 },
-  { color: '#e6a23c', percentage: 40 },
-  { color: '#5cb87a', percentage: 60 },
-  { color: '#1989fa', percentage: 80 },
-  { color: '#6f7ad3', percentage: 100 }
-]
+const props = defineProps({
+  data: Object
+})
 </script>
 
 <style scoped lang="scss"></style>
