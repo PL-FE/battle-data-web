@@ -36,8 +36,9 @@ import Regional from '@/module/regional/index.vue'
 import FlowingTrend from '@/module/FlowingTrend.vue'
 import BorderBox from '@/components/BorderBox.vue'
 import VScaleScreen from 'v-scale-screen'
-import { reactive } from 'vue'
+import { onMounted, reactive } from 'vue'
 import { useRoute } from 'vue-router'
+import { flowingTrend } from '@/api/battle'
 const wh = reactive({
   w: 1920,
   h: 1080
@@ -49,6 +50,11 @@ const route = useRoute()
 // const h = document.documentElement.clientHeight
 // const rate = wh.h / h
 // wh.w = rate * w
+onMounted(() => {
+  flowingTrend().then((res) => {
+    console.log('res', res)
+  })
+})
 </script>
 
 <style lang="scss" scoped>
