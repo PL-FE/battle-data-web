@@ -25,7 +25,9 @@ export default defineConfig({
   },
   css: {
     preprocessorOptions: {
-      additionalData: '@import "@/assets/scss/globalVar.scss";@import "@/assets/scss/globalMixin.scss";'
+      scss: {
+        additionalData: '@import "@/assets/styles/globalVar.scss";@import "@/assets/styles/globalMixins.scss";'
+      }
     }
   },
   server: {

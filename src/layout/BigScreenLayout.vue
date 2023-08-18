@@ -7,7 +7,7 @@
   >
     <div class="r-big-screen-container h-full flex flex-col p-4">
       <div class="r-big-screen-header text-8xl text-center border">我是标题</div>
-      <div class="r-big-screen-body flex-1 grid gap-4 grid-cols-5 grid-rows-2">
+      <div class="r-big-screen-body flex-1 grid gap-4 grid-cols-5 grid-rows-2 overflow-hidden">
         <BorderBox class="one" title="流水趋势">
           <FlowingTrend />
         </BorderBox>
